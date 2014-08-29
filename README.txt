@@ -1,5 +1,5 @@
 Program for changing image contrast and brightness.
-------------------------------------------------------------------------------------------------------
+
 
 Takes in 4 parameters:
 - input_image_file_name
@@ -9,7 +9,7 @@ Takes in 4 parameters:
 
 For example: ./ContrastBrightness lena.jpg lenaRemastered.jpg 2.2 50
 
-------------------------------------------------------------------------------------------------------
+
 Coded by: Rafal Mossakowski
 Language: C++
 Based on: http://docs.opencv.org/doc/tutorials/core/basic_linear_transform/basic_linear_transform.html
