@@ -10,21 +10,26 @@ int main(int argc, char** argv)
 	Mat inputImg, outputImg;
 	double alpha;	//controls contrast
 	int beta;		//controls brightness
+	stringstream s1, s2;
 
 	//checking if all parameters are present
-	if(argc != 3)
+	if(argc != 5)
 	{
 		cout << "There should be exactly  parameters!\n";
 		return -1;
 	}
 
-	//loading images
+	//loading images, alpha and beta
 	inputImg = imread(argv[1]);
 	if(!inputImg.data)
 	{
 		cout << "Error: input file opening failure!\n";
 	}
 	outputImg = Mat::zeros(inputImg.size(), inputImg.type());
+	s1 << argv[3];
+	s1 >> alpha;
+	s2 << argv[4];
+	s2 >> beta;
 
 	//transofrmating image
 	for(int y = 0; y < inputImg.rows; y++)
